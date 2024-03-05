@@ -6,7 +6,7 @@
 /*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:10:21 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/05 18:23:52 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/05 18:34:19 by youmoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 typedef struct s_mini
 {
 	char			**command;
-	int				input;
-	int				output;
+	int				flag_input_output;
+	char			**after_out_in_put;
 	char			**env;
 	struct s_mini	*next;
 } t_mini;
