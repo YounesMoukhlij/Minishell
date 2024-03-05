@@ -6,7 +6,7 @@
 /*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:10:21 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/05 15:18:32 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/05 18:23:52 by youmoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,15 +21,13 @@
 #include <readline/readline.h>
 
 
+
 typedef struct s_mini
 {
 	char			**command;
-	char			*char_input;
-	int				flag_append;
-	char			**envir;
-	char			*redirection_input;
-	char			*token;
-	char			*redirection_output;
+	int				input;
+	int				output;
+	char			**env;
 	struct s_mini	*next;
 } t_mini;
 

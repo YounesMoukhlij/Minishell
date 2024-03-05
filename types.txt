@@ -1,0 +1,9 @@
+> flagiha b 0
+>> flagiha b 1
+
+< flagiha b 2
+<< flagiha b 3
+
+
+malgiti walo flagihum b -1
+////////////////////
