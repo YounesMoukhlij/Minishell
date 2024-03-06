@@ -6,7 +6,7 @@
 /*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:10:21 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/05 15:18:32 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/06 12:11:06 by youmoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,3 @@ t_mini	*return_data(void);
 t_mini	*return_data1(void);
 
 #endif
-
-if (tokken == ">") red
-if (tokken == "<") ro
-if (tokken == "<<") roa
-if (tokken == ">>")
-if (tokken == "|")
