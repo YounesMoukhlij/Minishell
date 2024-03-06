@@ -6,7 +6,7 @@
 /*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:10:21 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/06 12:06:09 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/06 14:51:23 by youmoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,11 @@ typedef struct s_minishell
 {
 	char				**cmd;
 	char				*after_cmd;
-	int					flag_input_output;
-	char				*after_out_or_input;
+	int					*flag_input_output;
+	char				**after_out_or_input;
 	char				**env;
 	struct s_minishell	*next;
 } t_minishell;
-
-
-
-
 
 
 
