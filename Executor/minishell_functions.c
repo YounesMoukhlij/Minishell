@@ -6,7 +6,7 @@
 /*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:38:02 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/02 13:42:13 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:08:34 by youmoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,18 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	}
 	return (0);
+}
+
+int	calculate_len_env(char **env)
+{
+	
+}
+
+
+char	**ft_fill_env(char **env)
+{
+	int	len;
+
+	len = calculate_len_env(env);
+	printf("%d\n", len);
 }

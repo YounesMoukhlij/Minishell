@@ -6,14 +6,14 @@
 #    By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/02 12:51:20 by youmoukh          #+#    #+#              #
-#    Updated: 2024/03/02 14:20:11 by youmoukh         ###   ########.fr        #
+#    Updated: 2024/03/07 14:51:35 by youmoukh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.c \
 	  parsing.c \
-	  functions.c \
-	  minishell_functions.c \
+	#   functions.c \
+	#   minishell_functions.c \
 
 OBJ = ${SRC:.c=.o}
 CFLAGS = -Wall -Wextra -Werror 
