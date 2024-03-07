@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ynassibi <ynassibi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 15:10:21 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/07 14:52:01 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:26:25 by ynassibi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,13 @@ typedef struct s_minishell
 	struct s_minishell	*next;
 }	t_minishell;
 
-
-// TOOLS
+typedef struct node
+{
+	char	**cmd;
+	int	tk;
+	struct node* next;
+} t_node;
+//yassine
 int		ft_strlen(char *s);
 void	ft_putstr_fd(char *s, int fd, int flag_newline);
 int		ft_strcmp(char *s1, char *s2);
