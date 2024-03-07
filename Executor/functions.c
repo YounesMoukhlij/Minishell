@@ -6,7 +6,7 @@
 /*   By: youmoukh <youmoukh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 13:50:39 by youmoukh          #+#    #+#             */
-/*   Updated: 2024/03/05 14:34:23 by youmoukh         ###   ########.fr       */
+/*   Updated: 2024/03/07 14:26:55 by youmoukh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_putstr_fd(char *s, int fd, int flag_newline)
 		write(fd, "\n", 1);
 }
 
-void	ft_echo(t_mini *mini)
+void	ft_echo(t_minishell *mini)
 {
 	int	fd;
 
@@ -52,7 +52,7 @@ void	ft_echo(t_mini *mini)
 		write(fd, "\n", 1);
 }
 
-void	ft_cd(t_mini *mini)
+void	ft_cd(t_minishell *mini)
 {
 	int	i;
 
@@ -62,7 +62,7 @@ void	ft_cd(t_mini *mini)
 	printf("%d\n", i);
 }
 
-void	ft_pwd(t_mini *mini)
+void	ft_pwd(t_minishell *mini)
 {
 	char	pwd[1024];
 	int		fd;
@@ -91,14 +91,14 @@ void	ft_pwd(t_mini *mini)
 	}
 }
 
-void	ft_exit(t_mini *mini)
+void	ft_exit(t_minishell *mini)
 {
 	(void) mini;
 	ft_putstr_fd("exit", 1, 1);
 	exit(0);
 }
 
-void	ft_env(t_mini *mini)
+void	ft_env(t_minishell *mini)
 {
 	int	fd;
 	int	i;
@@ -135,31 +135,32 @@ void	ft_env(t_mini *mini)
 	}
 }
 
-void	ft_export(t_mini *mini)
+void	ft_export(t_minishell *mini)
 {
 	(void) mini;
 }
 
-void	ft_unset(t_mini *mini)
+void	ft_unset(t_minishell *mini)
 {
 	(void) mini;
 }
 
 
-void	functions(t_mini *mini)
+void	functions(t_minishell *mini)
 {
-	if (ft_strcmp(mini->command, "echo") == 0)
+	if (ft_strcmp(mini->cmd[0], "echo") == 0)
 		ft_echo(mini);
-	else if (ft_strcmp(mini->command, "cd") == 0)
+	else if (ft_strcmp(mini->cmd[0], "cd") == 0)
 		ft_cd(mini);
-	else if (ft_strcmp(mini->command, "pwd") == 0)
+	else if (ft_strcmp(mini->cmd[0], "pwd") == 0)
 		ft_pwd(mini);
-	else if (ft_strcmp(mini->command, "exit") == 0)
+	else if (ft_strcmp(mini->cmd[0], "exit") == 0)
 		ft_exit(mini);
-	else if (ft_strcmp(mini->command, "env") == 0)
+	else if (ft_strcmp(mini->cmd[0], "env") == 0)
 		ft_env(mini);
-	else if (ft_strcmp(mini->command, "export") == 0)
+	else if (ft_strcmp(mini->cmd[0], "export") == 0)
 		ft_export(mini);
-	else if (ft_strcmp(mini->command, "unset") == 0)
+	else if (ft_strcmp(mini->cmd[0], "unset") == 0)
 		ft_unset(mini);
 }
+
